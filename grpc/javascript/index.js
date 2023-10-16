@@ -2,7 +2,7 @@ import { loadPackageDefinition, Server, ServerCredentials } from '@grpc/grpc-js'
 import { loadSync } from '@grpc/proto-loader';
 
 // Load the .proto file
-const packageDefinition = loadSync('./proto/profile.proto', {
+const packageDefinition = loadSync('../../proto/profile.proto', {
     keepCase: true,
     longs: String,
     enums: String,
