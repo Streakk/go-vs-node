@@ -146,14 +146,11 @@ func computeHandler(c *fiber.Ctx) error {
 		Average: average,
 		Product: product,
 	}
-
 	return c.JSON(result)
 }
 
 func main() {
 	app := fiber.New()
-
 	app.Post("/compute", computeHandler)
-
 	app.Listen(":8080")
 }
