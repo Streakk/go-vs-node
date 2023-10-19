@@ -19,8 +19,12 @@ const server = createServer((req, res) => {
                     return;
                 }
 
-                const sum = values.reduce((acc, val) => acc + val, 0);
-                const product = values.reduce((acc, val) => acc * val, 1);
+                let sum = 0;
+                let product = 1;
+                for (let i = 0; i < values.length; i++) {
+                    sum += values[i];
+                    product *= values[i];
+                }                
                 const average = sum / values.length;
 
                 res.writeHead(200, { 'Content-Type': 'application/json' });
